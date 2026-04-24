@@ -359,6 +359,62 @@
     .loc-dt-val { font-size: 0.87rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
     .loc-dt-val a { color: rgba(255,255,255,0.55); text-decoration: none; }
 
+    /* ── GALLERY ── */
+    .gallery { background: var(--black); padding: 100px 0; }
+    .gal-head { padding: 0 5% 3rem; max-width: 1280px; margin: 0 auto; display: flex; align-items: flex-end; justify-content: space-between; }
+    .gal-head .display { color: var(--white); }
+    .gal-head .eyebrow { color: var(--gold); }
+    .gal-hint { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.25); padding-bottom: 0.3rem; }
+    .gal-scroll {
+      display: flex; gap: 1.2rem; overflow-x: auto; padding: 0 5% 1.5rem;
+      scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+    }
+    .gal-scroll::-webkit-scrollbar { display: none; }
+    .gi { flex-shrink: 0; scroll-snap-align: start; border-radius: 2px; overflow: hidden; position: relative; }
+    .gi:nth-child(1) { width: 520px; height: 380px; }
+    .gi:nth-child(2) { width: 380px; height: 380px; }
+    .gi:nth-child(3) { width: 460px; height: 380px; }
+    .gi:nth-child(4) { width: 400px; height: 380px; }
+    .gi:nth-child(5) { width: 480px; height: 380px; }
+    .gi:nth-child(6) { width: 420px; height: 380px; }
+    .gi:nth-child(7) { width: 360px; height: 380px; }
+    .gi img { transition: transform 0.6s var(--ease); }
+    .gi:hover img { transform: scale(1.06); }
+    .gi-cap {
+      position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.78), transparent);
+      color: rgba(255,255,255,0.8); font-size: 0.78rem; font-weight: 400; letter-spacing: 1px;
+      transform: translateY(100%); transition: transform 0.4s var(--ease);
+    }
+    .gi:hover .gi-cap { transform: translateY(0); }
+
+    /* ── ORDER PLATFORMS ── */
+    .order-platforms { background: var(--cream); padding: 100px 5%; }
+    .order-platforms .wrap { max-width: 1280px; margin: 0 auto; }
+    .op-header { text-align: center; margin-bottom: 4rem; }
+    .op-header .display { color: var(--dark); }
+    .op-header .lead { color: var(--stone); margin-top: 1rem; }
+    .op-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+    .op-card {
+      background: var(--paper); border: 1px solid var(--border); border-radius: 4px;
+      padding: 2.5rem 2rem; text-align: center;
+      transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.35s;
+      text-decoration: none; display: block;
+    }
+    .op-card:hover { transform: translateY(-6px); box-shadow: 0 16px 44px rgba(8,6,4,0.1); border-color: transparent; }
+    .op-logo { font-size: 2.8rem; margin-bottom: 1rem; }
+    .op-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--dark); margin-bottom: 0.4rem; }
+    .op-desc { font-size: 0.82rem; color: var(--stone); line-height: 1.6; margin-bottom: 1.5rem; }
+    .op-btn {
+      display: inline-block; padding: 0.65rem 1.6rem;
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+      border-radius: 2px; transition: all 0.3s;
+    }
+    .op-dd  { background: var(--red); color: var(--white); }
+    .op-ue  { background: #06c167; color: var(--white); }
+    .op-gh  { background: #f63440; color: var(--white); }
+    .op-card:hover .op-btn { opacity: 0.9; }
+
     /* ── ORDER CTA ── */
     .order-cta {
       position: relative; overflow: hidden;
@@ -479,7 +535,7 @@
 <!-- ── HERO ── -->
 <section class="hero" id="home">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=85" alt="Ginger Cafe dining experience" />
+    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1920&q=85" alt="Ginger Cafe dining experience" />
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -549,7 +605,7 @@
   <div class="wrap">
     <div class="story-grid">
       <div class="story-photo r rl">
-        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1000&q=85" alt="Ginger Cafe kitchen and cuisine" />
+        <img src="https://gingercafe.net/wp-content/uploads/2020/12/peking-duck-web.jpg" alt="Ginger Cafe signature Peking Duck" />
         <div class="story-badge">
           <div class="big">2</div>
           <div class="sm">Locations</div>
@@ -583,7 +639,7 @@
   <div class="dishes-grid">
     <div class="dc r">
       <div class="dc-img">
-        <img src="https://images.unsplash.com/photo-1534482421-64566f976cfa?auto=format&fit=crop&w=900&q=85" alt="Lobster dish" />
+        <img src="https://gingercafe.net/wp-content/uploads/2016/11/lobster.jpg" alt="Lobster with Garlic and Jalapeño" />
       </div>
       <div class="dc-overlay"></div>
       <div class="dc-body">
@@ -595,7 +651,7 @@
     </div>
     <div class="dc r d1">
       <div class="dc-img">
-        <img src="https://images.unsplash.com/photo-1544025162-d76538752c2b?auto=format&fit=crop&w=900&q=85" alt="Lamb chop" />
+        <img src="https://gingercafe.net/wp-content/uploads/2016/11/lamb-chop.jpg" alt="Red Wine Lemongrass Lamb Chop" />
       </div>
       <div class="dc-overlay"></div>
       <div class="dc-body">
@@ -607,7 +663,7 @@
     </div>
     <div class="dc r d2">
       <div class="dc-img">
-        <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=900&q=85" alt="Dim sum" />
+        <img src="https://gingercafe.net/wp-content/uploads/2020/12/chaozhou-crab-cake3-web.jpg" alt="Chaozhou Crab Cake" />
       </div>
       <div class="dc-overlay"></div>
       <div class="dc-body">
@@ -705,6 +761,78 @@
   </div>
 </section>
 
+<!-- ── GALLERY ── -->
+<section class="gallery">
+  <div class="gal-head">
+    <div>
+      <span class="eyebrow r">The Food</span>
+      <h2 class="display r d1">Straight From<br/><em>Our Kitchen.</em></h2>
+    </div>
+    <div class="gal-hint r d2">Scroll to explore →</div>
+  </div>
+  <div class="gal-scroll">
+    <div class="gi">
+      <img src="https://gingercafe.net/wp-content/uploads/2016/11/lobster.jpg" alt="Lobster with Garlic and Jalapeño" />
+      <div class="gi-cap">Lobster with Garlic & Jalapeño</div>
+    </div>
+    <div class="gi">
+      <img src="https://gingercafe.net/wp-content/uploads/2016/11/lamb-chop.jpg" alt="Lemongrass Lamb Chop" />
+      <div class="gi-cap">Red Wine Lemongrass Lamb Chop</div>
+    </div>
+    <div class="gi">
+      <img src="https://gingercafe.net/wp-content/uploads/2016/01/sea-bass.jpg" alt="Steamed Sea Bass" />
+      <div class="gi-cap">Steamed Sea Bass with Ginger Scallion</div>
+    </div>
+    <div class="gi">
+      <img src="https://gingercafe.net/wp-content/uploads/2016/11/short-rib.jpg" alt="Braised Short Rib" />
+      <div class="gi-cap">Braised Boneless Short Rib</div>
+    </div>
+    <div class="gi">
+      <img src="https://gingercafe.net/wp-content/uploads/2020/12/peking-duck-web.jpg" alt="Peking Duck" />
+      <div class="gi-cap">Signature Peking Duck</div>
+    </div>
+    <div class="gi">
+      <img src="https://gingercafe.net/wp-content/uploads/2020/12/chaozhou-crab-cake3-web.jpg" alt="Chaozhou Crab Cake" />
+      <div class="gi-cap">Chaozhou Crab Cake</div>
+    </div>
+    <div class="gi">
+      <img src="https://gingercafe.net/wp-content/uploads/2016/01/cocktail.jpg" alt="Cocktails" />
+      <div class="gi-cap">Crafted Cocktails</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ORDER PLATFORMS ── -->
+<section class="order-platforms">
+  <div class="wrap">
+    <div class="op-header">
+      <span class="eyebrow r">Order Online</span>
+      <h2 class="display r d1">Delivery & <em>Takeout</em></h2>
+      <p class="lead r d2">Order Ginger Cafe from your favorite delivery platform — straight to your door.</p>
+    </div>
+    <div class="op-grid">
+      <a href="https://www.doordash.com/store/ginger-cafe-sunnyvale-466/" target="_blank" rel="noopener" class="op-card r">
+        <div class="op-logo">🚗</div>
+        <div class="op-name">DoorDash</div>
+        <div class="op-desc">Fast delivery from our Sunnyvale location. Track your order live.</div>
+        <span class="op-btn op-dd">Order on DoorDash</span>
+      </a>
+      <a href="https://www.ubereats.com/store/ginger-cafe-sunnyvale/F5QYcng6Sa-aJeXrYCCfSg" target="_blank" rel="noopener" class="op-card r d1">
+        <div class="op-logo">🛵</div>
+        <div class="op-name">Uber Eats</div>
+        <div class="op-desc">Order through the Uber Eats app or website for delivery or pickup.</div>
+        <span class="op-btn op-ue">Order on Uber Eats</span>
+      </a>
+      <a href="https://www.grubhub.com/restaurant/ginger-cafe-sunnyvale-398-w-el-camino-real-sunnyvale/1425630" target="_blank" rel="noopener" class="op-card r d2">
+        <div class="op-logo">🍱</div>
+        <div class="op-name">Grubhub</div>
+        <div class="op-desc">Browse the full menu and place your order directly on Grubhub.</div>
+        <span class="op-btn op-gh">Order on Grubhub</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ── DIM SUM FEATURE ── -->
 <section class="dimsum">
   <div class="dimsum-bg">
@@ -723,7 +851,7 @@
       </div>
     </div>
     <div class="dimsum-photo r rr">
-      <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=85" alt="Fresh dim sum" />
+      <img src="https://gingercafe.net/wp-content/uploads/2016/01/sea-bass.jpg" alt="Steamed Sea Bass" />
     </div>
   </div>
 </section>
@@ -843,6 +971,7 @@
   <div class="order-btns r d2">
     <a href="tel:4087362828" class="btn-white">📞 Sunnyvale · (408) 736-2828</a>
     <a href="tel:4088472625" class="btn-white-outline">📞 Gilroy · (408) 847-2625</a>
+    <a href="https://www.doordash.com/store/ginger-cafe-sunnyvale-466/" target="_blank" rel="noopener" class="btn-white-outline">🚗 Order Delivery</a>
   </div>
 </section>
 
